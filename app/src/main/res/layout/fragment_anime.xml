@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.fragments.AnimeFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAnime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3"
+        tools:listitem="@layout/item_anime" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/prepend_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/append_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+
+</FrameLayout>
